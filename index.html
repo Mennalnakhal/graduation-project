@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>سكينة – الصفحة الرئيسية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfbf7;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الهيدر بخلفية بيضاء */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: flex-start; /* نبدأ من اليمين في RTL */
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      z-index: 1200;
+      gap: 15px;
+    }
+
+    header .lang-ar {
+      margin-right: 50px;
+      display: flex;
+      gap: 15px;
+    }
+
+    header .lang-ar a {
+      color: #967551;
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+      background-color: rgba(240, 230, 210, 0.7);
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      display: inline-block;
+    }
+
+    header .lang-ar a:hover {
+      background-color: #d9c8a8;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-image: url('therapist.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 70px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    .hero p.subtitle {
+      font-size: 1.4em;
+      margin-bottom: 25px;
+      color: #f4e8d7;
+    }
+
+    .btn-book {
+      background-color: #967551;
+      color: white;
+      padding: 18px 40px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .btn-book:hover {
+      background-color: #7d633f;
+    }
+
+    .donate-btn {
+      position: fixed;
+      bottom: 60px;
+      left: 20px;
+      background-color: #967551;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+      z-index: 1100;
+    }
+
+    .donate-btn:hover {
+      background-color: #7d633f;
+    }
+
+    footer {
+      background-color: #fff;
+      padding: 15px 20px;
+      border-top: 1px solid #ddd;
+      font-size: 0.9em;
+      line-height: 1.4;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      z-index: 1000;
+      height: 50px;
+    }
+
+    footer p,
+    footer .credit {
+      margin: 0;
+    }
+
+    footer .credit a {
+      color: #967551;
+      margin: 0 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer .credit a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8em;
+      }
+
+      .hero p.subtitle {
+        font-size: 1.1em;
+      }
+
+      .btn-book {
+        padding: 14px 24px;
+        font-size: 1em;
+      }
+
+      .donate-btn {
+        font-size: 0.9em;
+        padding: 10px 16px;
+        bottom: 60px;
+        left: 10px;
+      }
+
+      footer {
+        height: auto;
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 5px;
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="lang-ar">
+      <a href="#">تسجيل الدخول</a>
+      <a href="#">تسجيل جديد</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>مرحبًا بك في سكينة، حيث تجد السكينة والطمأنينة</h1>
+      <p class="subtitle">جد نوع الاستشارة المناسب لدعم احتياجاتك النفسية.</p>
+      <a href="#" class="btn-book">احجز جلستك الآن</a>
+    </div>
+  </section>
+
+  <a href="#" class="donate-btn">تبرع الآن</a>
+
+  <footer>
+    <p>&copy; 2025 سكينة – جميع الحقوق محفوظة</p>
+    <div class="credit">
+      Photo by
+      <a
+        href="https://unsplash.com/@silverkblack?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        target="_blank"
+        >Vitaly Gariev</a
+      >
+      on
+      <a
+        href="https://unsplash.com/photos/a-woman-sitting-on-a-couch-talking-to-another-woman-m-82PNzgFq4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        target="_blank"
+        >Unsplash</a
+      >
+    </div>
+  </footer>
+</body>
+</html>
